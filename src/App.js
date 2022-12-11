@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import router from './router/router';
 
 function App() {
+  useEffect( () =>{
+    AOS.init();
+    AOS.refresh();
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="max-w-[1280px] mx-auto">
+            <RouterProvider router={router}></RouterProvider>
+            
     </div>
   );
 }
