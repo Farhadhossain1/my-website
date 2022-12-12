@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const Project = ({project}) => {
-    const {image, projectName, description} = project;
+    const {image, projectName, description, id} = project;
     return (
         <div data-aos="zoom-in-up"
         data-aos-duration="3000"
@@ -15,7 +16,7 @@ const Project = ({project}) => {
           <p>{description}</p>
           <div className="card-actions justify-center">
             <button className=" btn btn-primary bg-red-900 hover:bg-red-400 text-black font-bold"><FaGithub className='mr-2'></FaGithub> GitHub</button>
-            {/* <button className="btn btn-primary bg-red-900 hover:bg-red-400 text-black font-bold"> <BsFillCaretRightSquareFill className='mr-2'></BsFillCaretRightSquareFill> demo</button> */}
+            <Link to= {`/projectDetails/${id}`}><button  className=" btn btn-primary bg-red-900 hover:bg-red-400 text-black font-bold">Details</button></Link>
           </div>
         </div>
       </div>
