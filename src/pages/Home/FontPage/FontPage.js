@@ -34,7 +34,7 @@ const FontPage = () => {
           'I’m a front-end web developer specializing in react js. ',
           'The main focus is front-end, but at the same time,',
           ' I try to learn new technology also. Currently,',
-          'I’m focused on learning mern stack development.',
+          'I’m focused on learning git stack development.',
           'I have six months of experience in',
           'the web development sector with some problem-solving expertise and am a Quick Learner. Here are some examples of projects and skills.',
           
